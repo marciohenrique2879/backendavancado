@@ -1,0 +1,35 @@
+<div class="container">
+  <nav class="navbar navbar-light bg-info">
+    Task List
+    <span style="left: 90%" (click)="sair()" >Sair</span>
+  </nav>
+
+
+
+
+  <form [formGroup]="form" (ngSubmit)="save()" style="margin-top: 3%">
+    <div class="form-group">
+      <div class="row">
+        <div class="col-md-11">
+          <input type="text" formControlName="description" style="width: 104%" class="form-control" id="task" placeholder="Enter task">
+        </div>
+        <div class="col-md-1" >
+          <button class="btn btn-primary" style="margin-left: 20px" type="submit">+</button>
+        </div>
+      </div>
+    </div>
+
+  </form>
+
+
+
+  <div class="list-group" >
+    <div class="list-group-item list-group-item-action list-group-item-light" style="position: relative"
+         *ngFor="let task of taskList" >
+      <span class="col-md-10">{{task.description}}</span>
+      <span class="col-md-2"  style="position: absolute; left: 90%; bottom: 10%">
+        <button class="btn btn-danger" (click)="delete(task)" style="margin-left: 20px">X</button>
+      </span>
+    </div>
+  </div>
+</div>

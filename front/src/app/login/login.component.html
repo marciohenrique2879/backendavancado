@@ -1,0 +1,18 @@
+
+<div class="card col-md-4" style="left: 35%; top: 200px;">
+  <div class="card-body">
+<form [formGroup]="form" (ngSubmit)="login()" >
+  <div class="form-group">
+    <label for="username">Usuario</label>
+    <input type="text" formControlName="username" class="form-control" id="username"  placeholder="Username">
+  </div>
+  <div class="form-group">
+    <label for="password">Senha</label>
+    <input type="password" formControlName="password" class="form-control" id="password" placeholder="Senha">
+  </div>
+  <button type="submit" class="btn btn-primary">Entrar</button>
+</form>
+    <a routerLink="/register">Nao tem conta? clique aqui</a>
+
+  </div>
+</div>
