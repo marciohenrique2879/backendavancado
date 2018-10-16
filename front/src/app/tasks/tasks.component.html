@@ -26,9 +26,10 @@
   <div class="list-group" >
     <div class="list-group-item list-group-item-action list-group-item-light" style="position: relative"
          *ngFor="let task of taskList" >
-      <span class="col-md-10">{{task.description}}</span>
-      <span class="col-md-2"  style="position: absolute; left: 90%; bottom: 10%">
-        <button class="btn btn-danger" (click)="delete(task)" style="margin-left: 20px">X</button>
+      <span class="col-md-10" [ngStyle] = " {'text-decoration-line': task.finished ? 'line-through':'none'}">{{task.description}}</span>
+      <span class="col-md-3"  style="position: absolute; left: 80%; bottom: 20%">
+        <button class="btn btn-danger" (click)="delete(task)" style="margin-left: 10px">✘</button>
+        <button class="btn btn-confirm" (click)="finish(task)" style="margin-left: 20px">✔</button>
       </span>
     </div>
   </div>

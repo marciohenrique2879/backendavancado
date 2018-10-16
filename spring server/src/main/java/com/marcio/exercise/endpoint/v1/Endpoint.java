@@ -49,6 +49,12 @@ public class Endpoint {
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
+    @PutMapping("/tasks")
+    public ResponseEntity<?> updateTask(@RequestBody Task task){
+        restTemplate.put("/tasks", task);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+    
     @DeleteMapping("/tasks/{id}")
     public ResponseEntity<?> saveTask(@PathVariable("id") String id){
         restTemplate.delete("/tasks/{id}",id);

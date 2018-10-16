@@ -30,6 +30,14 @@ module.exports.save = (req, res) => {
     })
 };
 
+module.exports.update = (req, res) => {
+    var query = { userId:req.body.userId, description: req.body.description}
+    , options = { multi: true };
+    Task.updateOne(query, req.body, options, (err)=> {
+        if (err) return res.send(500, { error: err });
+        res.json({sucess: true})
+    });
+};
 
 module.exports.delete = (req, res) => {
     Task.remove({_id: req.params._id }, (err)=> {

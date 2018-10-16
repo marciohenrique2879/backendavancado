@@ -49,6 +49,14 @@ export class TasksComponent implements OnInit {
     },error1 => console.log(error1))
   }
 
+  public finish(task){
+    task.finished = task.finished ? false : true ;
+    this.taskService.completeTask(task).subscribe(res=>{
+      console.log(res)
+      this.listTasks()
+    },error1 => console.log(error1))
+  }
+
   public createForm(){
     this.form = this.fb.group({
       description: ['',Validators.required],
