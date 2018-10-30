@@ -27,7 +27,7 @@ Digite o seguinte comando no terminal:
 `sudo docker-compose up`
 
 ##### No ambiente Windows:
-`docker-compose up -f docker-compose.windows.yml`
+`docker-compose -f docker-compose-windows.yml up`
 
 Ao concluir a inicializaçao das imagens, basta ir no browser acessar o seguinte endereço:
 ```shell
