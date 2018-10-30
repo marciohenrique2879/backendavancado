@@ -1,4 +1,12 @@
 # Microservices - Especialização Web e Mobile(FULL STACK) UFG 
+<div style="margin-left:10px">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/250px-Angular_full_color_logo.svg.png" width="50" style="margin-left:10px"/>
+<img src="http://www.totalvoice.com.br/blog/wp-content/uploads/2018/06/TotalVoice_node-js_-e1530196551698-770x385.jpg" width="100" style="margin-left:10px"/>
+<img src="https://static.imasters.com.br/wp-content/uploads/2017/09/mongodb-logo-rgb-j6w271g1xn-768x203.jpg" width="150" style="margin-left:10px"/>
+<img src="https://cdn-images-1.medium.com/max/1600/1*GqY4jk1KA_cXWBRINu4BEQ.png" width="100" style="margin-left:10px"/>
+<img src="https://miro.medium.com/max/1074/1*cFEH7PQEJo7C9iRlGukWkg.png" width="150" style="margin-left:10px"/>
+</div>
+
 O trabalho final da disciplina de Back-end avançado.
 O desafio se consiste na criação de 2 microserviços com tecnologias e banco de dados diferentes.
 
