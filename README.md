@@ -1,22 +1,44 @@
-# backendavancado
-trabalho back end avancado full stack 2018
+# Microservices - Especialização Web e Mobile(FULL STACK) UFG 
+O trabalho final da disciplina de Back-end avançado.
+O desafio se consiste na criação de 2 microserviços com tecnologias e banco de dados diferentes.
 
-1- instale o mysql e crie um usuario com o username "root" e senha "root" e em seguida uma database com o nome "exercicebackend", 
-ou altere estes dados no arquivo application.properties para conectar com um usuario, senha e database ja existentes.
+## Microservicos
+###### 1. Node.Js + MongoDB
+Microserviço responsável pela API de atividades(taks) 
 
-2- instale o mongodb e execute-o com o comando "mongod" no cmd, caso ele ainda nao esteja em execucao,
+###### 2. Spring boot + Mysql
+Microserviço responsável pelo cadastro/autenticação de usuários
 
-3- Abra o cmd dentro do diretorio node server e execute os seguintes comandos:
+## Front-end
+###### Angular
+Telas de autenticação, cadastro de usuário, visualização e criação das tasks
 
-npm install -- save
-node server
+## Pre-requisitos
+Utilizamos o **Docker** para facilitar a execução dos microservices, portanto você deve ter que instala-lo para executar o projeto.
+**Links para download e instalação do Docker**
 
-4- abra o eclipse e importe o projeto spring server. Localize o arquivo ExerciceApplication.java no package com.marcio.exercice,
- em seguida clique com o botao auxiliar no arquivo e em Run As > Java Application
+* [Windows](https://docs.docker.com/windows/started)
+* [OS X](https://docs.docker.com/mac/started/)
+* [Linux](https://docs.docker.com/linux/started/)
 
-5- Abra o cmd dentro do diretorio front e execute os seguintes comandos:
+### Rodando o projeto
+Digite o seguinte comando no terminal:
+##### No ambiente Linux
+`sudo docker-compose up`
 
-npm install -- save
-ng serve
+##### No ambiente Windows:
+`docker-compose up -f docker-compose.windows.yml`
 
-6- acesse http://localhost:4200
+Ao concluir a inicializaçao das imagens, basta ir no browser acessar o seguinte endereço:
+```shell
+http://localhost:4200/
+```
+
+
+
+## Integrantes
+* **Arthur Santos**  (https://github.com/acsantosabino)
+* **Daniel Leonardo**  (https://github.com/danielfnz)
+*  **Diego Barbosa**  (https://github.com/diegocostacmp)
+*  **Marcio Henrique**  (https://github.com/marciohenrique2879)
+
