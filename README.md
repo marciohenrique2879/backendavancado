@@ -27,9 +27,13 @@ Utilizamos o **Docker** para facilitar a execução dos microservices, portanto 
 ### Rodando o projeto
 Digite o seguinte comando no terminal:
 ##### No ambiente Linux
+`sudo docker-compose build`
+
 `sudo docker-compose up`
 
 ##### No ambiente Windows:
+`docker-compose -f docker-compose-windows.yml build`
+
 `docker-compose -f docker-compose-windows.yml up`
 
 Ao concluir a inicializaçao das imagens, basta ir no browser acessar o seguinte endereço:
