@@ -5,18 +5,19 @@ O trabalho final da disciplina de Back-end avançado.
 O desafio se consiste na criação de 2 microserviços com tecnologias e banco de dados diferentes.
 
 ## Microservicos
-###### 1. Node.Js + MongoDB
+##### 1. Node.Js + MongoDB
 Microserviço responsável pela API de atividades(taks) 
 
-###### 2. Spring boot + Mysql
+##### 2. Spring boot + Mysql
 Microserviço responsável pelo cadastro/autenticação de usuários
 
 ## Front-end
-###### Angular
+##### Angular
 Telas de autenticação, cadastro de usuário, visualização e criação das tasks
 
 ## Pre-requisitos
 Utilizamos o **Docker** para facilitar a execução dos microservices, portanto você deve ter que instala-lo para executar o projeto.
+
 **Links para download e instalação do Docker**
 
 * [Windows](https://docs.docker.com/windows/started)
