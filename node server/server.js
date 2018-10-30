@@ -12,6 +12,13 @@ app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({extended: true,limit: '50mb'}));
 
 mongoose.connect('mongodb://mongo:27017/exercice', { useNewUrlParser: true}).then(sucess => {
+    app.use(function (req, res, next) {
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE,*');
+        res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type,x-access-token,enctype,Accept,*');
+        res.setHeader('Access-Control-Allow-Credentials', true);
+        next();
+    });
     app.use('/',api)
 }).catch(erro => {
     console.log("Falha ao estabelecer conexão");

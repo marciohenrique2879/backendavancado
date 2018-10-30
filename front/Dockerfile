@@ -1,23 +1,24 @@
 # Create image based on the official Node 6 image from dockerhub
-FROM node:8
-
-# Create a directory where our app will be placed
-RUN mkdir -p /usr/src/app
+FROM node:8 as builder
 
 # Change directory so that our commands run inside this new directory
 WORKDIR /usr/src/app
 
-# Copy dependency definitions
-COPY package.json /usr/src/app
-
+# Get all the code needed to run the app
+COPY . .
 # Install dependecies
 RUN npm install
+RUN npm install -g @angular/cli --save
+RUN npm run build
 
-# Get all the code needed to run the app
-COPY . /usr/src/app
+# STEP 2 build a small nginx image with static website
+FROM nginx:alpine
+## Remove default nginx website
+RUN rm -rf /usr/share/nginx/html/*
 
-# Expose the port the app runs in
-EXPOSE 4200
+## From 'builder' copy website to default nginx public folder
+COPY ./nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=builder /usr/src/app/dist/project /usr/share/nginx/html
 
-# Serve the app
-CMD ["npm", "start"]
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
